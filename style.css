@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+/*ссылки */
+@import url('https://fonts.googleapis.com/css2?family=Kameron&display=swap');
+/*заголовки */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@200&display=swap');
+/*основной текст */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.header-img img {
+    height: 70px;
+}
+
+.header-left {
+    position: relative;
+    right: 10%;
+}
+
+.header-right {
+    position: relative;
+    left: 10%;
+}
+
+.header-menu nav ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: Dosis;
+    letter-spacing: 3px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+}
+
+.header-menu ul li {
+    float: left;
+}
+
+.header-menu ul li a {
+    padding: 0 20px;
+    line-height: 40px;
+    transition: all 0.5s;
+}
+
+ul li a:hover {
+    color: grey;
+}
+
+.mercedes {
+    height: 90vh;
+    display: flex;
+}
+
+.mercedes-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mercedes-text {
+    position: relative;
+    top: 20%;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-family: Kameron;
+    font-size: 50px;
+}
+
+p {
+    font-family: Chivo;
+}
+
+a {
+    font-family: Dosis;
+}
+
+.mercedes-text p {
+    font-size: 20px;
+}
+
+.mercedes-but {
+    width: 40%;
+    height: 10%;
+    border: 2px solid deeppink;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 0 50% 0;
+    transition: all 0.3s;
+}
+
+.mercedes-text a {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.mercedes img {
+    width: 500px;
+    /* position: relative;
+    top: 10%; */
+    margin: 10%;
+}
+
+.mercedes-but:hover {
+    background-color: deeppink;
+}
+
+.cars-card {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+.cars {
+    height: 90vh;
+}
+
+.cars-container h2 {
+    text-align: center;
+}
+
+.cars-item {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    border: 2px solid deeppink;
+}
+
+.cars-img img,
+.cars-item,
+.cars-text {
+    width: 350px;
+    height: 200px;
+}
+
+.cars-img,
+.cars-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+
+.cars-img,
+.cars-text {
+    backface-visibility: hidden;
+}
+
+.cars-text {
+    box-sizing: border-box;
+    padding: 10px 20px 20px 20px;
+    transform: rotateY(180deg);
+}
+
+.cars-img,
+.cars-text {
+    transition: 0.3s
+}
+
+.cars:hover .cars-img {
+    transform: rotateY(180deg);
+}
+
+.cars:hover .cars-text {
+    transform: rotateY(360deg);
+}
+
+.causes {
+    height: 90vh;
+}
+
+.causes_1 img {
+    height: 100px;
+}
+
+.causes-border {
+    height: 60vh;
+    border: 2px solid deeppink;
+    border-radius: 50% 0 50% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.causes-title {
+    margin-left: 10%;
+}
+
+.causes-item {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.causes_1 {
+    width: 15vw;
+}
+
+.footer-icon img {
+    width: 25px;
+}
+
+.footer-icon {
+    display: flex;
+    gap: 5%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    margin: 20px auto;
+    width: 1100px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .mercedes-container {
+        flex-direction: column;
+    }
+
+    .mercedes-text {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mercedes-img {
+        width: 80%;
+        margin: 100px auto 0;
+
+    }
+
+    .mercedes-img img {
+        width: 80%;
+    }
+
+    .causes-border {
+        border: none;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .causes-item {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .causes_1 {
+        width: 80%;
+    }
+
+    .causes-title {
+        margin: 0;
+    }
+
+    .cars-card {
+        flex-direction: column;
+        /* margin: 0 auto; */
+    }
+
+    footer {
+        display: none;
+    }
+}
